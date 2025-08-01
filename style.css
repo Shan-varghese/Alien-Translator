@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0c0c0c, #232323);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: linear-gradient(145deg, #2c2c2c, #434343);
+  padding: 50px 40px 40px 40px;
+  border-radius: 15px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 255, 150, 0.4);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  border: 3px solid rgba(0, 255, 150, 0.5);
+}
+
+h1 {
+  font-family: 'Orbitron', monospace;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 3.5rem;
+  text-shadow: 0 0 15px #00ff99;
+  color: #00ff99;
+  letter-spacing: 2px;
+}
+
+textarea {
+  width: 100%;
+  height: 130px;
+  border-radius: 10px;
+  border: none;
+  background: #1a1a1a;
+  color: #00ff99;
+  font-size: 1.2rem;
+  padding: 15px;
+  resize: vertical;
+  box-shadow: inset 0 0 12px #00ff99;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: inset 0 0 18px #00ff99;
+  background: #1c1c1c;
+}
+
+button {
+  background: linear-gradient(145deg, #00ff99, #00cc7a);
+  border: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 255, 150, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+  margin-bottom: 30px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(145deg, #00cc7a, #00ff99);
+  box-shadow: 0 0 30px rgba(0, 255, 150, 0.6);
+  transform: translateY(-5px);
+}
+
+button:active {
+  background: linear-gradient(145deg, #00ff99, #00cc7a);
+  transform: translateY(2px);
+  box-shadow: 0 3px 10px rgba(0, 255, 150, 0.4);
+}
+
+#outputText {
+  font-family: 'Orbitron', monospace;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: #33fff6;
+  text-shadow:
+    0 0 8px #33fff6,
+    0 0 20px #00fff7;
+  min-height: 130px;
+  position: relative;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #00ff99;
+}
+
+/* Glitch effect for alien text output */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 #00f9ff, -2px 0 #ff00ff;
+  }
+  20% {
+    text-shadow: -2px 0 #00f9ff, 2px 0 #ff00ff;
+  }
+  40% {
+    text-shadow: 2px 0 #ff00ff, -2px 0 #00f9ff;
+  }
+  60% {
+    text-shadow: -2px 0 #ff00ff, 2px 0 #00f9ff;
+  }
+  80% {
+    text-shadow: 2px 0 #00f9ff, -2px 0 #ff00ff;
+  }
+  100% {
+    text-shadow: -2px 0 #00f9ff, 2px 0 #ff00ff;
+  }
+}
+
+.glitch-effect {
+  animation: glitch 1.5s infinite;
+}
+
+#floatingEmojis {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  z-index: 1;
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.75;
+  animation: floatUp 8s linear infinite;
+  user-select: none;
+  filter: drop-shadow(0 0 2px #00fff7);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(30px) rotate(360deg);
+    opacity: 0;
+  }
+}
