@@ -3,6 +3,9 @@
 
 #ALIEN TRANSILATOR 🎯
 
+**# Website link!!**
+https://alien-translator.vercel.app/
+
 
 ## Basic Details
 ### Team Name: TEAM ALPHA
@@ -85,8 +88,6 @@ For Hardware:
 https://drive.google.com/file/d/1EH5afOUdzeMvLJpi5Ji1mv6St0um2RlO/view?usp=sharing
 First we type the content to be translated and after pressing translate the content get translated to alien language.
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
 - ASWIN ABRAHAM: PROGRAMMER
